@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding:0 ;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    list-style: none;
+    text-transform: capitalize;
+}
+
+body{
+    background-color: #222;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+}
+
+
+
+ul li{
+    position: relative;
+    margin: 5px;
+}
+
+ul li a{
+    position: relative;
+    text-decoration: none;
+    height: 40px;
+    display: block;
+    padding: 5px 10px;
+    margin: 20px 0;
+    font-weight: 300;
+    letter-spacing: 2px;
+    overflow: hidden;
+}
+
+ul li a::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ec333f;
+    transform: scaleX(0);
+    transition: .5s;
+    transition-delay: .5s ease-in-out;
+}
+
+ul li a:hover::before{
+    transform: scaleX(1);
+    transform-origin:left;
+    transition-delay: .5s;
+}
+ul li a span{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: block;
+    color: aliceblue;
+    text-align: center;
+    transition: all .5s;
+}
+
+ul li a:hover span:nth-child(1)
+{
+    transform: translateY(-100%);
+}
+ul li a:hover span:nth-child(2)
+{
+    transform: translateY(-100%);
+}
